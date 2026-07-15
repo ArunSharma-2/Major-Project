@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 
 #------------------------------DATA COLLECTION------------------------------#
 
-df = pd.read_csv("creditcard.csv")
+df = pd.read_csv("data/creditcard.csv")
 X = df.drop(columns=["Class"])
 y = df["Class"]
 
@@ -126,5 +126,5 @@ plt.xticks(rotation=0)
 for index, value in enumerate(values):
     plt.text(index, value + 0.01, f"{value:.4f}", ha="center")
 plt.tight_layout()
-plt.savefig("model_comparison.png")
+plt.savefig("images/model_comparison.png")
 plt.show()
